@@ -1,0 +1,22 @@
+<viewdata model="MvcBestPractices.Models.ListModel"/>
+
+<content name="TitleContent">
+	List
+</content>
+
+<content name="MainContent">
+
+    <h2><%=Model.Title%></h2>
+    
+    <div if="Model.Posts.Count==11">
+		10
+    </div>
+   
+    <ul>
+        <li each="var post in Model.Posts">
+			<a href="Post/Page?PostId=<%=post.Id%>"><%=post.Title%></a>
+		</li>
+    </ul>
+
+
+</content>
